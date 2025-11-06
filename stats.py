@@ -1,18 +1,18 @@
 
 
-def get_book_text(path_to_file):
-    with open(path_to_file) as f:
+def get_book_text(path):
+    with open(path) as f:
         file_contents = f.read()
     return file_contents
 
-def word_count():
-    text = get_book_text("books/frankenstein.txt")
+def word_count(path):
+    text = get_book_text(path)
     words = text.split()
     num_words = len(words)
     print(f"Found {num_words} total words")
 
-def count_char():
-    text = get_book_text("books/frankenstein.txt")
+def count_char(path):
+    text = get_book_text(path)
     lower_case = text.lower()
     text_dict = {}
     for i in range(ord('a'), ord('z')+1):
